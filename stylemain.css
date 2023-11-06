@@ -11,7 +11,7 @@ body {
     padding: 0;
 }
 
-/* style class navbar */
+/* style class punya navbar */
 .navbar{
     position: absolute;
     top: 0;
@@ -78,7 +78,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* style class kontengambar */
+/* style class punya kontengambar */
 .boxpesan{
     position: absolute;
     top: 50%;
@@ -159,7 +159,7 @@ input[type="submit"]:hover {
 
 /* style class iklan */
 .iklan{
-    margin-top: 10rem;
+    margin-top: 5rem;
     text-align: center;
 }
 
