@@ -3,29 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Travelin aja</title>
     <link rel="stylesheet" href="stylemain.css" />
   </head>
   <body>
-    <div class="kontengambar">
+    <div class="navbar">
+      <nav>
+        <ul class="judul">
+          <li><a href="">Beranda</a></li>
+          <li><a href="">Cek Pesanan</a></li>
+          <li><a href="">Mau Kemana?</a></li>
+          <li><a href="">Bantuan</a></li>
+          <div class="login">
+            <button><a href="#">Masuk</a></button>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="kontenmain">
+      <div class="boxpesan">
+        <h2>Book Now!</h2>
+        <form>
+          <div class="form-group">
+            <label for="alamat">Kota tujuan, atau nama hotel</label>
+            <input
+              type="text"
+              id="alamat"
+              name="alamat"
+              placeholder="Alamat penginapan"
+            />
+          </div>
+
+          <div class="tanggal">
+            <div class="date-field">
+              <label for="checkin">Tanggal Check-in</label>
+              <input type="date" id="checkin" name="checkin" />
+            </div>
+            <div class="date-field">
+              <label for="checkout">Tanggal Check-out</label>
+              <input type="date" id="checkout" name="checkout" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Cari" />
+          </div>
+        </form>
+      </div>
+
       <img
         src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg"
         alt="gambar"
         width="1600px"
       />
-      <div class="navbar">
-        <nav>
-          <ul class="judul">
-            <li><a href="">Beranda</a></li>
-            <li><a href="">Cek Pesanan</a></li>
-            <li><a href="">Mau Kemana?</a></li>
-            <li><a href="">Bantuan</a></li>
-            <div class="login">
-              <button><a href="#">Masuk</a></button>
-            </div>
-          </ul>
-        </nav>
-      </div>
+
+      <div class="linear-bawah"></div>
     </div>
+
+    <div class="iklan">
+      <h1 class="card">Yuk Ambil Liburanmu!</h1>
+    </div>
+
+    <script src="otak.js"></script>
   </body>
 </html>
