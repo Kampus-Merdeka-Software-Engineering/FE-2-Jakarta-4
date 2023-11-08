@@ -1,31 +1,47 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+:root{
+    --guest : #00385D;
+    --primary : #023373;
+    --color1 : #011126;
+    --color2 : #023E73;
+    --color3 : #1AA3D9;
+    --color4 : #4BD4F2;
+    --color5 : #DD8400;
+    --color6 : #8b5300;
+    --hover : #002136;
 }
 
-body {
+*{
     font-family: 'Poppins', sans-serif;
-    font-size: larger;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
 }
 
 /* style class punya navbar */
-.navbar{
+.navbar {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 999;
     padding: 10px;
+    justify-content: space-between;
 }
 
 .navbar nav {
     display: flex;
-    justify-content: flex-end;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav img {
+    margin-right: 42rem;
 }
 
 nav ul {
+    white-space: nowrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -38,19 +54,23 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #0050a3
+    color: var(--hover);
+}
+
+nav ul li a.active {
+    color: var(--hover); 
 }
 
 .sticky {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(0, 179, 195, 0.7);
+    background-color: rgba(75, 212, 242, 0.7);
     padding: 15px;
 }
     
@@ -60,7 +80,7 @@ nav a:hover {
 }
 
 .login button {
-    background-color: #003d65;
+    background-color: var(--guest);
     padding: 7px 14px;
     border: none;
     border-radius: 8px;
@@ -70,7 +90,7 @@ nav a:hover {
 }
 
 .login button:hover {
-    background-color: #0065d1; 
+    background-color: var(--hover); 
 }
 
 .login button a {
@@ -78,21 +98,51 @@ nav a:hover {
     color: #fff;
 }
 
-/* style class punya kontengambar */
+/* style class punya kontenmain */
+
 .boxpesan{
+    color: var(--guest);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50px;
-    padding: 1rem 3rem 2rem 3rem;
+    padding: 2rem 3rem 3rem 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    
 }
 
+.boxpesan .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.boxpesan .list a {
+    color: var(--primary);
+    padding: 20px;
+}
+
+.boxpesan .list :hover{
+    color: var(--color5);
+    font-size: larger;
+}
+
+.boxpesan .garis{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin: 10px auto;
+}
+
 .boxpesan h2{
+    text-align: center;
     white-space: nowrap;
-    color: rgb(147, 84, 0);
+    color: var(--guest);
+    margin-bottom: 20px;
 }
 
 .boxpesan form {
@@ -107,10 +157,24 @@ nav a:hover {
 }
 
 .tanggal {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding-bottom: 20px;
+    justify-content: space-between;
+    color: var(--primary);
+}
+
+.tanggal #swapButton{
+    padding-top: 7px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.1); 
+}
+
+.tanggal #swapButton:hover{
+    background-color: #e6e6e6;
 }
 
 .date-field {
@@ -128,7 +192,7 @@ input, select {
 }
 
 input[type="submit"] {
-    background-color: #00375c;
+    background-color: var(--guest);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -137,7 +201,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #005bbd;
+    background-color: var(--hover);
 }
 
 .kontenmain img {
@@ -154,7 +218,7 @@ input[type="submit"]:hover {
     width: 100%;
     height: 300px;
     background: linear-gradient(transparent, white);
-    top: 800px;
+    top: 812px;
 }
 
 /* style class iklan */
@@ -162,5 +226,80 @@ input[type="submit"]:hover {
     margin-top: 5rem;
     text-align: center;
 }
+.iklan .judulPromo{
+    color: var(--color2);
+}
+
+.iklan .judulPromo span{
+    font-size: larger;
+    color: var(--color3);
+
+}
+
+.iklan .kalimat {
+    text-align: start;
+    margin: 50px;
+    color: var(--color2);
+}
+
+.iklan .card{
+    color: var(--color2);
+    margin: 10px;
+    text-align: start;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.iklan .card img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.iklan .card .card-content {
+    margin: 5px;
+    padding: 10px;
+}
+
+.iklan .card h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.iklan .card p {
+    color: var(--color5);
+    font-size: 14px;
+}
+
+.iklan .card p span{
+    font-size:medium ;
+    color: var(--color3);
+}
+
+.iklan .card a {
+    display: block;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.iklan .card a:hover {
+    background-color: #0056b3;
+}
+
+.iklan .bungkus{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 0;
+    margin-bottom: 30px;
+} 
 
 

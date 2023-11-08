@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travelin aja</title>
     <link rel="stylesheet" href="stylemain.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <div class="navbar">
       <nav>
+        <a href="main.html">
+          <img src="assets/logo.svg" alt="" />
+        </a>
         <ul class="judul">
-          <li><a href="">Beranda</a></li>
-          <li><a href="">Cek Pesanan</a></li>
-          <li><a href="">Mau Kemana?</a></li>
-          <li><a href="">Bantuan</a></li>
+          <li><a href="main.html" id="beranda">Beranda</a></li>
+          <li><a href="#" id="cek-pesanan">Cek Pesanan</a></li>
+          <li><a href="#" id="mau-kemana">Mau Kemana?</a></li>
+          <li><a href="#" id="bantuan">Bantuan</a></li>
           <div class="login">
             <button><a href="#">Masuk</a></button>
           </div>
@@ -23,7 +27,16 @@
 
     <div class="kontenmain">
       <div class="boxpesan">
-        <h2>Book Now!</h2>
+        <div class="list">
+          <a href="main.html"><i data-feather="home"></i>Hotel</a>
+          <a href="pesawatBook.html">Pesawat</a>
+          <a href="kereta.html">Kereta</a>
+          <a href="#">Tiket Liburan</a>
+        </div>
+
+        <div class="garis"></div>
+
+        <h2>Pesan Hotelmu Sekarang!</h2>
         <form>
           <div class="form-group">
             <label for="alamat">Kota tujuan, atau nama hotel</label>
@@ -62,9 +75,66 @@
     </div>
 
     <div class="iklan">
-      <h1 class="card">Yuk Ambil Liburanmu!</h1>
+      <h1 class="judulPromo">Jelajahi <span>destinasi</span> paling populer</h1>
+      <p class="kalimat">
+        "Siap-siap untuk petualangan tak terlupakan! Temukan keindahan dunia
+        dengan penawaran tiket terbaik dari TravelinAja. Jelajahi destinasi
+        impian Anda dan rasakan sensasi liburan yang belum pernah Anda rasakan
+        sebelumnya. Segera pesan tiket Anda dan mulai rencanakan petualangan
+        seru bersama kami!"
+      </p>
+
+      <div class="bungkus">
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/15879944/pexels-photo-15879944/free-photo-of-laut-pemandangan-alam-langit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="card-content">
+            <h3>Labuan Bajo</h3>
+            <p>Lombok, <span>Indonesia</span></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/6476728/pexels-photo-6476728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="card-content">
+            <h3>Candi Borobudur</h3>
+            <p>Magelang, <span>Indonesia</span></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+          <div class="card-content">
+            <h3>?? </h3>
+            <p>Bali, <span>Indonesia</span></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/4889869/pexels-photo-4889869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div class="card-content">
+            <h3>Tamansari</h3>
+            <p>Yogyakarta, <span>Indonesia</span></p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <script src="otak.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
