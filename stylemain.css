@@ -7,6 +7,7 @@
     --color4 : #4BD4F2;
     --color5 : #DD8400;
     --color6 : #8b5300;
+    --color7 :#72a8d8;
     --hover : #002136;
 }
 
@@ -24,60 +25,63 @@
 .navbar {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 999;
     padding: 10px;
-    justify-content: space-between;
-}
-
-.navbar nav {
+    width: 100%;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar nav img {
-    margin-right: 42rem;
-}
-
-nav ul {
-    white-space: nowrap;
+  }
+  
+  nav #logo {
+    margin-right: auto;
+  }
+  
+  .judul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-}
+    align-items: center;   
+    margin-left: auto; 
+  }
 
-nav li {
+  .judul a{
+    font-family: 'poppins', sans-serif;
+    font-size: larger;
+    color: var(--color1);
+    margin: 2rem;
+  }
+
+  .judul a:hover{
+    color: var(--color2);
+    font-weight: 700;
+  }
+  
+  .judul li {
     padding: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: var(--hover);
-}
-
-nav ul li a.active {
-    color: var(--hover); 
-}
+  }
+  
+  .login {
+    margin-top: 0.3rem;
+    text-align: center;
+    margin-left: auto;
+  }
+  
 
 .sticky {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(75, 212, 242, 0.7);
+    background-color: rgba(114, 168, 216, 0.8);
     padding: 15px;
-}
-    
-.login {
-    margin-top: 0.3rem;
-    text-align: center;
-}
+    font-weight: 600;
+}  
 
 .login button {
     background-color: var(--guest);
@@ -221,6 +225,68 @@ input[type="submit"]:hover {
     top: 812px;
 }
 
+/* style class promo */
+.promo{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.promo .bungkus1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 0;
+    margin-bottom: 30px;
+} 
+
+
+.promo .judulnya{
+    color: var(--color2);
+}
+
+.promo .judulnya span{
+    color: var(--color3);
+    font-size: larger;
+}
+
+.promo .kata2{
+    text-align: justify;
+    margin: 50px;
+    color: var(--color2);
+}
+
+.promo .card1{
+    color: var(--color2);
+    margin: 10px;
+    text-align: start;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo .card1 img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.promo .card1 .card-content1{
+    margin: 5px;
+    padding: 10px;
+}
+.promo .card1 p {
+    color: var(--color5);
+    font-size: 14px;
+}
+
+.promo .card1 p span{
+    font-size:medium ;
+    color: var(--color3);
+}
+
+
 /* style class iklan */
 .iklan{
     margin-top: 5rem;
@@ -264,11 +330,6 @@ input[type="submit"]:hover {
     padding: 10px;
 }
 
-.iklan .card h2 {
-    font-size: 18px;
-    margin: 0;
-}
-
 .iklan .card p {
     color: var(--color5);
     font-size: 14px;
@@ -279,21 +340,6 @@ input[type="submit"]:hover {
     color: var(--color3);
 }
 
-.iklan .card a {
-    display: block;
-    text-align: center;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.iklan .card a:hover {
-    background-color: #0056b3;
-}
-
 .iklan .bungkus{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -302,4 +348,43 @@ input[type="submit"]:hover {
     margin-bottom: 30px;
 } 
 
+.palingbawah{
+    padding-bottom: 0;
+    padding: 3rem;
+    box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+}
 
+
+
+.palingbawah .konten{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.palingbawah .konten .bawah{
+    white-space: nowrap;
+    margin-right: 10rem;
+    margin-left: 1rem;
+    padding-bottom: 0;
+}
+
+.palingbawah .konten .bawah .logo{
+    align-items: center;
+    white-space: nowrap;
+}
+
+.palingbawah .konten .bawah img{
+    margin: 1rem;
+    align-items: center;
+}
+
+.deep{
+    box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+.deep p{
+    text-align: center;
+    font-family:sans-serif;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}

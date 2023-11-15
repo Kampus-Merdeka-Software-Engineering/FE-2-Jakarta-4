@@ -3,138 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travelin aja</title>
+    <title>Travelin Aja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="stylemain.css" />
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="stylebaru.css" />
   </head>
   <body>
     <div class="navbar">
       <nav>
         <a href="main.html">
-          <img src="assets/logo.svg" alt="" />
+          <img src="assets/logo.svg" alt="" id="logo" />
         </a>
         <ul class="judul">
-          <li><a href="main.html" id="beranda">Beranda</a></li>
-          <li><a href="#" id="cek-pesanan">Cek Pesanan</a></li>
-          <li><a href="#" id="mau-kemana">Mau Kemana?</a></li>
-          <li><a href="#" id="bantuan">Bantuan</a></li>
-          <div class="login">
-            <button><a href="#">Masuk</a></button>
-          </div>
+          <li><a href="#" id="beranda">Beranda</a></li>
+          <li><a href="hotel.html" id="layanan">Layanan</a></li>
+          <li><a href="#" id="mau-kemana">Tentang Kami</a></li>
         </ul>
+        <div class="login">
+          <button><a href="#">Masuk</a></button>
+        </div>
       </nav>
     </div>
 
-    <div class="kontenmain">
-      <div class="boxpesan">
-        <div class="list">
-          <a href="main.html"><i data-feather="home"></i>Hotel</a>
-          <a href="pesawatBook.html">Pesawat</a>
-          <a href="kereta.html">Kereta</a>
-          <a href="#">Tiket Liburan</a>
+    <div class="konten">
+      <div class="konten-main">
+        <div class="main2">
+          <div class="kalimat">
+            <h1>Wujudkan Liburan Kamu Sekarang!</h1>
+            <p>
+              Dapatkan tiket murah dan perjalanan yang aman, nyaman serta
+              terpercaya bersama kami
+            </p>
+          </div>
+          <img src="assets/model1.png" alt="" width="50%" />
         </div>
-
-        <div class="garis"></div>
-
-        <h2>Pesan Hotelmu Sekarang!</h2>
-        <form>
-          <div class="form-group">
-            <label for="alamat">Kota tujuan, atau nama hotel</label>
-            <input
-              type="text"
-              id="alamat"
-              name="alamat"
-              placeholder="Alamat penginapan"
-            />
+        <div class="kotak">
+          <p>Jelajahi indahnya Dunia bersama TravelinAja sekarang</p>
+          <div class="kotak2">
+            <a href="hotel.html"><p>Book Now!</p></a>
           </div>
-
-          <div class="tanggal">
-            <div class="date-field">
-              <label for="checkin">Tanggal Check-in</label>
-              <input type="date" id="checkin" name="checkin" />
-            </div>
-            <div class="date-field">
-              <label for="checkout">Tanggal Check-out</label>
-              <input type="date" id="checkout" name="checkout" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <input type="submit" value="Cari" />
-          </div>
-        </form>
+        </div>
       </div>
-
-      <img
-        src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg"
-        alt="gambar"
-        width="1600px"
-      />
-
-      <div class="linear-bawah"></div>
     </div>
 
-    <div class="iklan">
-      <h1 class="judulPromo">Jelajahi <span>destinasi</span> paling populer</h1>
-      <p class="kalimat">
-        "Siap-siap untuk petualangan tak terlupakan! Temukan keindahan dunia
-        dengan penawaran tiket terbaik dari TravelinAja. Jelajahi destinasi
-        impian Anda dan rasakan sensasi liburan yang belum pernah Anda rasakan
-        sebelumnya. Segera pesan tiket Anda dan mulai rencanakan petualangan
-        seru bersama kami!"
+    <footer class="palingbawah">
+      <div class="profil">
+        <div class="profil-konten"></div>
+        <div class="profil-konten"></div>
+        <div class="profil-konten"></div>
+      </div>
+
+      <div class="konten">
+        <div class="bawah">
+          <h3>Partner</h3>
+          <div class="logo">
+            <img src="assets/wonderful.png" alt="" width="90%" />
+            <img src="assets/kemenparekraf.png" alt="" width="45%" />
+          </div>
+        </div>
+        <div class="bawah">
+          <h3>Keamanan Transaksi</h3>
+          <div class="logo">
+            <img src="assets/mscard.png" alt="" width="60%" />
+            <img src="assets/visa.png" alt="" width="60%" />
+          </div>
+        </div>
+        <div class="bawah">
+          <h3>Ikuti Kami</h3>
+          <div class="logo">
+            <a href="https://www.instagram.com/kemenparekraf.ri/"
+              ><img src="assets/ig.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.tiktok.com/@kemenparekraf"
+              ><img src="assets/tt.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.facebook.com/ParekrafRI/"
+              ><img src="assets/fb.png" alt="" width="10%"
+            /></a>
+            <a
+              href="https://id.linkedin.com/company/ministry-of-tourism-and-creative-economy"
+              ><img src="assets/in.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.youtube.com/channel/UClm8VHUZQnhFmIndX6oLgJA"
+              ><img src="assets/yt.png" alt="" width="10%"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="deep">
+      <p class="copyright">
+        © 2011-2023 PT. Global TravelinAja Network. All Rights Reserved.
       </p>
-
-      <div class="bungkus">
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/15879944/pexels-photo-15879944/free-photo-of-laut-pemandangan-alam-langit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt=""
-          />
-          <div class="card-content">
-            <h3>Labuan Bajo</h3>
-            <p>Lombok, <span>Indonesia</span></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/6476728/pexels-photo-6476728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt=""
-          />
-          <div class="card-content">
-            <h3>Candi Borobudur</h3>
-            <p>Magelang, <span>Indonesia</span></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-          />
-          <div class="card-content">
-            <h3>?? </h3>
-            <p>Bali, <span>Indonesia</span></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/4889869/pexels-photo-4889869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt=""
-          />
-          <div class="card-content">
-            <h3>Tamansari</h3>
-            <p>Yogyakarta, <span>Indonesia</span></p>
-          </div>
-        </div>
-
-      </div>
     </div>
-
+    
     <script src="otak.js"></script>
-    <script>
-      feather.replace();
-    </script>
   </body>
 </html>
