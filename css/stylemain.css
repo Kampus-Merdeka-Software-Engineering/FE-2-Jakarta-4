@@ -388,3 +388,7 @@ input[type="submit"]:hover {
     padding-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.on{
+    font-weight: bold;
+}
