@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pesan Tiket Hotel</title>
+    <title>Pesan Tiket Liburan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,39 +36,45 @@
     <div class="kontenmain">
       <div class="boxpesan">
         <div class="list">
-          <a href="hotel.html" class="on"></i>Hotel</a>
+          <a href="hotel.html"></i>Hotel</a>
           <a href="pesawatBook.html"></i>Pesawat</a>
           <a href="kereta.html">Kereta</a>
-          <a href="liburan.html">Tiket Liburan</a>
+          <a href="liburan.html" class="on">Tiket Liburan</a>
         </div>
 
         <div class="garis"></div>
 
-        <h2>Pesan Hotelmu Sekarang!</h2>
+        <h2>Pesan Liburanmu Sekarang!</h2>
         <form>
           <div class="form-group">
-            <label for="alamat">Kota tujuan, atau nama hotel</label>
+            <label for="alamat">Destinasi, atau nama tempat</label>
             <input
               type="text"
               id="alamat"
               name="alamat"
-              placeholder="Masukkan nama kota atau nama hotel tujuan Anda"
+              placeholder="Masukkan nama tempat tujuan liburan Anda"
             />
           </div>
 
           <div class="tanggal">
             <div class="date-field">
-              <label for="checkin">Tanggal Check-in</label>
-              <input type="date" id="checkin" name="checkin" />
+              <label for="tanggal">Tanggal</label>
+              <input type="date" id="tanggal" name="tanggal" />
             </div>
             <div class="date-field">
-              <label for="checkout">Tanggal Check-out</label>
-              <input type="date" id="checkout" name="checkout" />
+              <label for="jumlahtiket">Jumlah Tiket</label>
+              <select id="jumlahTiket" name="jumlahTiket">
+                <option value="satu">1</option>
+                <option value="dua">2</option>
+                <option value="tiga">3</option>
+                <option value="empat">4</option>
+                <option value="lima">5</option>
+              </select>
             </div>
           </div>
 
           <div class="form-group">
-            <input type="submit" value="Cari Hotel" />
+            <input type="submit" value="Cari Destinasi" />
           </div>
         </form>
       </div>
@@ -88,56 +94,54 @@
       Jangan lewatkan <span>promo</span> menarik sekarang juga
     </h1>
     <p class="kata2">
-      Nikmati kemewahan dan kenyamanan yang tak terlupakan di Hotel Hotel
-      Pilihanmu, tempat ideal untuk melarikan diri dari rutinitas sehari-hari.
-      Dengan pemandangan spektakuler, layanan berkualitas tinggi, dan
-      fasilitas modern, kami hadir untuk menjadikan setiap momen perjalanan
-      Anda istimewa. Reservasi sekarang dan buatlah kenangan indah di Hotel
-      Hotel Pilihanmu!
+        Nikmati liburan yang tak terlupakan di Tempat Rekreasi Pilihanmu, destinasi ideal untuk 
+        melarikan diri dari rutinitas sehari-hari. Dengan pemandangan spektakuler, fasilitas modern, 
+        dan berbagai aktivitas seru, kami hadir untuk menjadikan setiap momen liburan Anda istimewa. 
+        Pesan sekarang dan buat kenangan indah di Tempat Rekreasi Pilihanmu!
     </p>
 
     <div class="bungkus1">
       <div class="card1">
         <img
-          src="https://images.pexels.com/photos/5232471/pexels-photo-5232471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Ayana Hotel"
+          src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2022/12/28/9DsbRLB/wisata-jakarta-aquarium-2022-lokasi-harga-tiket-dan-rute57.jpg"
+          alt="Jakarta Aquarium"
         />
         <div class="card-content1">
-          <h3>Ayana Hotel</h3>
-          <p>Bali, <span>Indonesia</span></p>
-        </div>
-      </div>
-
-      <div class="card1">
-        <img
-          src="https://i.pinimg.com/564x/ac/59/5e/ac595ebb89c8441624643e9888eabbee.jpg"
-          alt="Ayana Hotel"
-        />
-        <div class="card-content1">
-          <h3>Grand Hyatt</h3>
+          <h3>Jakarta Aquarium & Safari</h3>
           <p>Jakarta, <span>Indonesia</span></p>
         </div>
       </div>
 
       <div class="card1">
         <img
-          src="https://1.bp.blogspot.com/-OVgvuz_L5do/Wcs8pLIUDVI/AAAAAAAAGuQ/JFD09nSwqkMovkfKwux-WtzS9cEI-8ZRACLcBGAs/s1600/grand%2Bambarrukmo.jpg"
-          alt="Ayana Hotel"
+          src="https://img.okezone.com/content/2020/10/26/408/2299441/danau-kawah-putih-wisata-alam-eksotis-nan-legendaris-di-bandung-VTi6AvxpFR.jpg"
+          alt="Kawah Putih"
         />
         <div class="card-content1">
-          <h3>Grand Ambarukmo</h3>
-          <p>Yogyakarta, <span>Indonesia</span></p>
+          <h3>Kawah Putih</h3>
+          <p>Bandung, <span>Indonesia</span></p>
         </div>
       </div>
 
       <div class="card1">
         <img
-          src="https://img.hotelmurah.com/hotel/myhm_3918_7.jpg"
-          alt="Ayana Hotel"
+          src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_869/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/vijuqpmzdwthfdykyuhl/TiketMasukTheJungleWaterparkAdventure.webp"
+          alt="The Jungle"
         />
         <div class="card-content1">
-          <h3>Swiss-belhotel</h3>
-          <p>Lampung, <span>Indonesia</span></p>
+          <h3>The Jungle Waterpark</h3>
+          <p>Bogor, <span>Indonesia</span></p>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img
+          src="https://authentic-indonesia.com/wp-content/uploads/2019/07/zoos-in-bali.jpg"
+          alt="Bali Zoo"
+        />
+        <div class="card-content1">
+          <h3>Bali Zoo</h3>
+          <p>Bali, <span>Indonesia</span></p>
         </div>
       </div>
     </div>
