@@ -45,14 +45,20 @@
         <div class="garis"></div>
 
         <h2>Pesan Pesawatmu!</h2>
-        <form>
+        <form action="pemesananbandara.html" method="get" id="pesawatForm">
           <div class="tanggal">
             <div class="date-field">
               <label for="bandaraAsal">Bandara Asal</label>
               <!-- Dropdown untuk bandara asal -->
               <select id="bandaraAsal" name="bandaraAsal">
-                <option value="bandaraA">Bandara A</option>
-                <option value="bandaraB">Bandara B</option>
+                <option value="" disabled selected>Pilih Bandara Asal</option>
+                <option value="bandaraA">Bandara Soekarno-Hatta</option>
+                <option value="bandaraB">Bandara Ngurah Rai</option>
+                <option value="bandaraC">Bandara Juanda</option>
+                <option value="bandaraD">Bandara Kualanamu</option>
+                <option value="bandaraE">Bandara Sultan Hasanuddin</option>
+                <option value="bandaraF">Bandara Lombok</option>
+                <option value="bandaraG">Bandara Halim Perdanakusuma</option>
               </select>
             </div>
             <button id="swapButton"><i data-feather="repeat"></i></button>
@@ -60,8 +66,14 @@
               <label for="bandaraTujuan">Bandara Tujuan</label>
               <!-- Dropdown untuk bandara tujuan -->
               <select id="bandaraTujuan" name="bandaraTujuan">
-                <option value="bandaraA">Bandara A</option>
-                <option value="bandaraB">Bandara B</option>
+                <option value="" disabled selected>Pilih Bandara Tujuan</option>
+                <option value="bandaraA">Bandara Soekarno-Hatta</option>
+                <option value="bandaraB">Bandara Ngurah Rai</option>
+                <option value="bandaraC">Bandara Juanda</option>
+                <option value="bandaraD">Bandara Kualanamu</option>
+                <option value="bandaraE">Bandara Sultan Hasanuddin</option>
+                <option value="bandaraF">Bandara Lombok</option>
+                <option value="bandaraG">Bandara Halim Perdanakusuma</option>
               </select>
             </div>
           </div>

@@ -1,0 +1,376 @@
+:root{
+    --guest : #00385D;
+    --primary : #023373;
+    --color1 : #011126;
+    --color2 : #023E73;
+    --color3 : #1AA3D9;
+    --color4 : #4BD4F2;
+    --color5 : #DD8400;
+    --color6 : #8b5300;
+    --color7 :#72a8d8;
+    --color8 : #ffd18c;
+    --color9 : #707070;
+    --hover : #002136;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.hotel img{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+}
+
+.hotel .text h2{
+    font-weight: bold;
+    font-size: 70px;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(26, 45, 101, 0.466);
+    text-align: center;
+    z-index: 2;
+}
+
+.layanan-menu-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -2%;
+    align-items: center;
+    background-color: #6b98c46b;
+    padding: 1rem;
+    display: flex;
+    width: 29%;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 3;
+}
+
+
+.layanan-menu {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.layanan-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layanan-menu li {
+    margin: 0 15px;
+}
+
+.layanan-menu a {
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: medium;
+    font-size: 18px;
+    position: relative;
+}
+
+.layanan-menu a.on {
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.hotelbox{
+    margin-bottom: 7%;
+}
+
+.hotelbox .info-box{
+    margin-bottom: -3%;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+    margin: 70px auto; 
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    height: 250px;
+}
+
+.info-box img {
+    width: 300px; 
+    height: 250px; 
+    object-fit: cover; 
+}
+
+.info-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-content .stars {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.info-content .stars i {
+    margin-right: 5px; 
+    color: #e1db15;
+}
+
+.info-content h2 {
+    margin-top: 0;
+    color: var(--color2);
+}
+
+.info-content .lokasi{
+    color: #707070;
+    margin-bottom: 5px;
+}
+
+.info-content p {
+    color: var(--color2);
+}
+
+.fasilitas-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+.fasilitas-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.fasilitas-item i {
+    margin-right: 5px;
+}
+
+.fasilitas-text {
+    color: #243c66;
+}
+
+.info-content .harga{
+    color: var(--color2);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.button-booking {
+    background-color: #1090c2;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-booking:hover {
+    background-color: #067ba9;
+}
+
+.data{
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+
+.data .container{
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+.info h3{
+    color: var(--color2);
+    font-size: 25px;
+    margin: 0;
+}
+
+.info .teks{
+    color: #707070;
+    margin-bottom: 17px;
+    font-size: 17px;
+}
+
+.info .kartu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 6%;
+    padding: 0;
+    margin-top: -2%;
+}
+
+
+.card {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(139, 120, 120, 0.1);
+    background-color: #FFF;
+}
+
+.info .card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 10px;
+    text-align: center;
+    color: #edf0f3;
+    background-color: #023373;
+}
+
+.flight-card-wrapper{
+    margin-bottom: 6%;
+}
+
+.flight-card-wrapper .flight-card{
+    margin-bottom: -3%;
+}
+
+.flight-card {
+    display: flex;
+    align-items: center;
+    max-width: 80%; 
+    margin: 70px auto; 
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    height: 150px;
+}
+
+.logo-container {
+    flex: 0 0 80px; 
+    padding: 20px;
+
+}
+
+.logo-container img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 4%;
+}
+
+.details {
+    flex: 1;
+    padding: 20px;
+}
+
+.details h3{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.details p{
+    color: #707070;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-right: 13%;
+}
+
+.section .time-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-section .departure p,
+.time-section .arrival p {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.time-section .departure .kota,
+.time-section .arrival .kota {
+    font-size: 20px;
+    color: #a7a1a1; 
+}
+
+.departure,
+.arrival {
+    text-align: center;
+    margin: 0 35px;
+}
+
+
+
+.connector {
+    height: 1px;
+    width: 150px;
+    background-color: #a7a1a1;
+    border: none;
+    border-top: 2px solid #a7a1a1;
+    position: relative;
+}
+
+.connector i {
+    position: absolute;
+    margin-top: -14%;
+    left: 53%; 
+    transform: translateX(-50%); 
+}
+
+.duration {
+    text-align: center;
+    margin-left: 6%;
+    margin-top: -7%;
+    color: #a7a1a1;
+}
+
+
+.price {
+    position: relative;
+    text-align: right;
+    font-size: 28px;
+    color: var(--color2);
+    font-weight: 500;
+    margin-top: 10%;
+    margin-right: 30px;
+}
+
+.booking-button {
+
+    width: 85%;
+    height: 45px;
+    margin-top: 12%;
+    padding: 10px;
+    background-color: #104fa1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.booking-button:hover {
+    background-color: #023373;
+}

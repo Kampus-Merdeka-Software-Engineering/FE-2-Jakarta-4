@@ -302,7 +302,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--color1); /* Sesuaikan warna teks dengan kebutuhan Anda */
+    color: var(--color1);
     text-align: center;
     font-size: large;
 }

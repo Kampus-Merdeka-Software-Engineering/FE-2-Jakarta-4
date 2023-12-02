@@ -24,7 +24,7 @@
         </a>
         <ul class="judul">
           <li><a href="main.html" id="beranda">Beranda</a></li>
-          <li><a href="hotel.html" id="layanan">Layanan</a></li>
+          <li><a href="hotel.html" id="layanan" class="active">Layanan</a></li>
           <li><a href="tentangkami.html" id="tentang">Tentang Kami</a></li>
         </ul>
         <div class="login">
@@ -46,14 +46,18 @@
         <div class="garis"></div>
 
         <h2>Pesan Keretamu!</h2>
-        <form>
+        <form action="pemesanankereta.html" method="get">
           <div class="tanggal">
             <div class="date-field">
               <label for="bandaraAsal">Stasiun Asal</label>
               <!-- Dropdown untuk bandara asal -->
               <select id="bandaraAsal" name="bandaraAsal">
-                <option value="bandaraA">Stasiun A</option>
-                <option value="bandaraB">Stasiun B</option>
+                <option value="" disabled selected>Pilih Stasiun Asal</option>
+                <option value="bandaraA">Stasiun Gambir</option>
+                <option value="bandaraB">Stasiun Bandung</option>
+                <option value="bandaraC">Stasiun Pasar Senen</option>
+                <option value="bandaraD">Stasiun Kiaracondong</option>
+                <option value="bandaraE">Bandara Cimahi</option>
               </select>
             </div>
             <button id="swapButton"><i data-feather="repeat"></i></button>
@@ -61,8 +65,12 @@
               <label for="bandaraTujuan">Stasiun Tujuan</label>
               <!-- Dropdown untuk bandara tujuan -->
               <select id="bandaraTujuan" name="bandaraTujuan">
-                <option value="bandaraA">Stasiun A</option>
-                <option value="bandaraB">Stasiun B</option>
+                <option value="" disabled selected>Pilih Stasiun Tujuan</option>
+                <option value="bandaraA">Stasiun Gambir</option>
+                <option value="bandaraB">Stasiun Bandung</option>
+                <option value="bandaraC">Stasiun Pasar Senen</option>
+                <option value="bandaraD">Stasiun Kiaracondong</option>
+                <option value="bandaraE">Bandara Cimahi</option>
               </select>
             </div>
           </div>

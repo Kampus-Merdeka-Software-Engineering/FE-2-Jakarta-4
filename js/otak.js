@@ -39,6 +39,34 @@ var swiper = new Swiper(".slide-content", {
     },
   });
 
+  const dataPenerbangan = [
+    { maskapai: 'Garuda Indonesia', logo: 'garuda.jpg' },
+    { maskapai: 'AirAsia', logo: 'airasia.jpg' },
+    { maskapai: 'Lion Air', logo: 'lionair.jpg' },
+  ];
+
+  // Menampilkan data di halaman
+  const daftarPenerbangan = document.getElementById('daftarPenerbangan');
+
+  dataPenerbangan.forEach(penerbangan => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    // Menambahkan gambar
+    const logo = document.createElement('img');
+    logo.src = penerbangan.logo;
+    card.appendChild(logo);
+
+    // Menambahkan nama maskapai
+    const namaMaskapai = document.createElement('p');
+    namaMaskapai.textContent = penerbangan.maskapai;
+    card.appendChild(namaMaskapai);
+
+    // Menambahkan card ke container
+    daftarPenerbangan.appendChild(card);
+});
+
+
 
 
 

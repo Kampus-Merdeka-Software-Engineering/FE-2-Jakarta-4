@@ -352,9 +352,9 @@ input[type="submit"]:hover {
     padding-bottom: 0;
     padding: 3rem;
     box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; 
 }
-
-
 
 .palingbawah .konten{
     width: fit-content;
@@ -364,8 +364,9 @@ input[type="submit"]:hover {
 
 .palingbawah .konten .bawah{
     white-space: nowrap;
+    margin: 0 1rem;
     margin-right: 10rem;
-    margin-left: 1rem;
+    margin-left: 7rem;
     padding-bottom: 0;
 }
 
