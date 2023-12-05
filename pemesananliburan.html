@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 15.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -133,7 +133,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 25.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -178,7 +178,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 60.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -223,7 +223,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 72.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -266,7 +266,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 140.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -312,8 +312,16 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 210.000,00 /tiket/orang</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
+          </div>
+        </div>
+
+        <div id="popup-container" class="popup-container">
+          <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <div class="checkmark-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <p class="popup-title">Tiket berhasil di pesan. Terima kasih!</p>
           </div>
         </div>
 

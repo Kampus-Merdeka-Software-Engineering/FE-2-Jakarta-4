@@ -95,7 +95,7 @@
                     <div class="price">
                         <p>Rp.1,259,000</p>
                     </div>
-                    <button class="booking-button">Pesan Tiket</button>
+                    <button class="booking-button" onclick="showPopup('Tiket pesawat berhasil dipesan')">Pesan Tiket</button>
                 </div>
             </div>
 
@@ -129,7 +129,7 @@
                     <div class="price">
                         <p>Rp.1,463,000</p>
                     </div>
-                    <button class="booking-button">Pesan Tiket</button>
+                    <button class="booking-button" onclick="showPopup('Tiket pesawat berhasil dipesan')">Pesan Tiket</button>
                 </div>
             </div>
 
@@ -164,7 +164,7 @@
                     <div class="price">
                         <p>Rp.1,515,000</p>
                     </div>
-                    <button class="booking-button">Pesan Tiket</button>
+                    <button class="booking-button" onclick="showPopup('Tiket pesawat berhasil dipesan')">Pesan Tiket</button>
                 </div>
             </div>
 
@@ -198,8 +198,16 @@
                     <div class="price">
                         <p>Rp.1,842,000</p>
                     </div>
-                    <button class="booking-button">Pesan Tiket</button>
+                    <button class="booking-button" onclick="showPopup('Tiket pesawat berhasil dipesan')">Pesan Tiket</button>
                 </div>
+            </div>
+        </div>
+
+        <div id="popup-container" class="popup-container">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div class="checkmark-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="popup-title">Tiket Pesawat berhasil di pesan. Terima kasih!</p>
             </div>
         </div>
 

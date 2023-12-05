@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 759.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -133,7 +133,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 800.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -176,7 +176,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 1.147.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -219,7 +219,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 1.287.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -263,7 +263,7 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 3.500.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
 
@@ -308,10 +308,19 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 4.799.000,00 /malam/kamar</p>
-                <button class="button-booking">Pesan Sekarang</button>
+                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
         </div>
+
+        <div id="popup-container" class="popup-container">
+          <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <div class="checkmark-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <p class="popup-title">Reservasi berhasil di pesan. Terima kasih!</p>
+          </div>
+        </div>
+      
 
 
         <footer class="palingbawah">

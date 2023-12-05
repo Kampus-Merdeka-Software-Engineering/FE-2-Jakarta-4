@@ -66,7 +66,14 @@ var swiper = new Swiper(".slide-content", {
     daftarPenerbangan.appendChild(card);
 });
 
+function showPopup(message) {
+    document.getElementById('popup-container').style.display = 'flex';
+    document.getElementById('popup-title').innerText = message;
+}
 
+function closePopup() {
+    document.getElementById('popup-container').style.display = 'none';
+}
 
 
 
