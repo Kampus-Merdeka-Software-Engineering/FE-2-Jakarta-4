@@ -45,7 +45,7 @@
         <div class="garis"></div>
 
         <h2>Pesan Hotelmu Sekarang!</h2>
-        <form action="pemesanan.html" method="get">
+        <form action="pemesanan.html" method="get"  id="hotelForm">
           <div class="form-group">
             <label for="alamat">Kota Tujuan</label>
             <input
@@ -53,17 +53,18 @@
               id="alamat"
               name="alamat"
               placeholder="Masukkan nama kota tujuan Anda"
+              required
             />
           </div>
 
           <div class="tanggal">
             <div class="date-field">
               <label for="checkin">Tanggal Check-in</label>
-              <input type="date" id="checkin" name="checkin" />
+              <input type="date" id="checkin" name="checkin" required />
             </div>
             <div class="date-field">
               <label for="checkout">Tanggal Check-out</label>
-              <input type="date" id="checkout" name="checkout" />
+              <input type="date" id="checkout" name="checkout" required />
             </div>
           </div>
 

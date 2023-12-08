@@ -50,7 +50,7 @@
             <div class="date-field">
               <label for="bandaraAsal">Bandara Asal</label>
               <!-- Dropdown untuk bandara asal -->
-              <select id="bandaraAsal" name="bandaraAsal">
+              <select id="bandaraAsal" name="bandaraAsal" required>
                 <option value="" disabled selected>Pilih Bandara Asal</option>
                 <option value="bandaraA">Bandara Soekarno-Hatta</option>
                 <option value="bandaraB">Bandara Ngurah Rai</option>
@@ -61,11 +61,11 @@
                 <option value="bandaraG">Bandara Halim Perdanakusuma</option>
               </select>
             </div>
-            <button id="swapButton"><i data-feather="repeat"></i></button>
+            <button id="swapButton" type="button" onclick="swapAirports()"><i data-feather="repeat"></i></button>
             <div class="date-field">
               <label for="bandaraTujuan">Bandara Tujuan</label>
               <!-- Dropdown untuk bandara tujuan -->
-              <select id="bandaraTujuan" name="bandaraTujuan">
+              <select id="bandaraTujuan" name="bandaraTujuan" required>
                 <option value="" disabled selected>Pilih Bandara Tujuan</option>
                 <option value="bandaraA">Bandara Soekarno-Hatta</option>
                 <option value="bandaraB">Bandara Ngurah Rai</option>
@@ -81,12 +81,12 @@
           <div class="tanggal">
             <div class="date-field">
               <label for="tanggalPergi">Tanggal Pergi</label>
-              <input type="date" id="tanggalPergi" name="tanggalPergi" />
+              <input type="date" id="tanggalPergi" name="tanggalPergi" required />
             </div>
 
             <div class="date-field">
               <label for="kelasPenerbangan">Kelas Penerbangan</label>
-              <select name="kelasPenerbangan" id="kelasPenerbangan">
+              <select name="kelasPenerbangan" id="kelasPenerbangan" required>
                 <option value="Ekonomi">Ekonomi</option>
                 <option value="Premium">Premium</option>
                 <option value="FirstClass">First Class</option>
@@ -276,7 +276,7 @@
         </p>
       </div>
 
-    <script src="otak.js"></script>
+    <script src="js/otak.js"></script>
     <script>
       feather.replace();
     </script>

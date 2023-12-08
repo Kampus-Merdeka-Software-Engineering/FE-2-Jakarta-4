@@ -37,34 +37,65 @@ var swiper = new Swiper(".slide-content", {
             slidesPerView: 3,
         },
     },
-  });
-
-  const dataPenerbangan = [
-    { maskapai: 'Garuda Indonesia', logo: 'garuda.jpg' },
-    { maskapai: 'AirAsia', logo: 'airasia.jpg' },
-    { maskapai: 'Lion Air', logo: 'lionair.jpg' },
-  ];
-
-  // Menampilkan data di halaman
-  const daftarPenerbangan = document.getElementById('daftarPenerbangan');
-
-  dataPenerbangan.forEach(penerbangan => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-
-    // Menambahkan gambar
-    const logo = document.createElement('img');
-    logo.src = penerbangan.logo;
-    card.appendChild(logo);
-
-    // Menambahkan nama maskapai
-    const namaMaskapai = document.createElement('p');
-    namaMaskapai.textContent = penerbangan.maskapai;
-    card.appendChild(namaMaskapai);
-
-    // Menambahkan card ke container
-    daftarPenerbangan.appendChild(card);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var hotelForm = document.getElementById("hotelForm");
+    var pesawatForm = document.getElementById("pesawatForm");
+    var keretaForm = document.getElementById("keretaForm");
+    var liburanForm = document.getElementById("liburanForm");
+
+    hotelForm.addEventListener("submit", function (event) {
+        if (!validateForm(hotelForm)) {
+            event.preventDefault();
+        }
+    });
+
+    pesawatForm.addEventListener("submit", function (event) {
+        if (!validateForm(pesawatForm)) {
+            event.preventDefault();
+        }
+    });
+
+    keretaForm.addEventListener("submit", function (event) {
+        if (!validateForm(keretaForm)) {
+            event.preventDefault();
+        }
+    });
+
+    liburanForm.addEventListener("submit", function (event) {
+        if (!validateForm(liburanForm)) {
+            event.preventDefault();
+        }
+    });
+
+    function validateForm(form) {
+        var elements = form.elements;
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].type !== "submit" && elements[i].hasAttribute("required") && elements[i].value === "") {
+                alert("Harap isi semua field formulir.");
+                return false; 
+            }
+        }
+        return true;
+    }
+});
+
+function swapAirports() {
+    var bandaraAsalValue = document.getElementById("bandaraAsal").value;
+    var bandaraTujuanValue = document.getElementById("bandaraTujuan").value;
+
+    document.getElementById("bandaraAsal").value = bandaraTujuanValue;
+    document.getElementById("bandaraTujuan").value = bandaraAsalValue;
+}
+
+function swapStations() {
+    var stasiunAsalValue = document.getElementById("stasiunAsal").value;
+    var stasiunTujuanValue = document.getElementById("stasiunTujuan").value;
+
+    document.getElementById("stasiunAsal").value = stasiunTujuanValue;
+    document.getElementById("stasiunTujuan").value = stasiunAsalValue;
+}
 
 function showPopup(message) {
     document.getElementById('popup-container').style.display = 'flex';

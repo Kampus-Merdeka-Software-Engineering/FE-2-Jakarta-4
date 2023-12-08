@@ -46,12 +46,12 @@
         <div class="garis"></div>
 
         <h2>Pesan Keretamu!</h2>
-        <form action="pemesanankereta.html" method="get">
+        <form action="pemesanankereta.html" method="get" id="keretaForm">
           <div class="tanggal">
             <div class="date-field">
-              <label for="bandaraAsal">Stasiun Asal</label>
+              <label for="stasiunAsal">Stasiun Asal</label>
               <!-- Dropdown untuk bandara asal -->
-              <select id="bandaraAsal" name="bandaraAsal">
+              <select id="stasiunAsal" name="stasiunAsal" required>
                 <option value="" disabled selected>Pilih Stasiun Asal</option>
                 <option value="bandaraA">Stasiun Gambir</option>
                 <option value="bandaraB">Stasiun Bandung</option>
@@ -60,11 +60,11 @@
                 <option value="bandaraE">Bandara Cimahi</option>
               </select>
             </div>
-            <button id="swapButton"><i data-feather="repeat"></i></button>
+            <button id="swapButton" type="button" onclick="swapStations()"><i data-feather="repeat"></i></button>
             <div class="date-field">
-              <label for="bandaraTujuan">Stasiun Tujuan</label>
+              <label for="stasiunTujuan">Stasiun Tujuan</label>
               <!-- Dropdown untuk bandara tujuan -->
-              <select id="bandaraTujuan" name="bandaraTujuan">
+              <select id="stasiunTujuan" name="stasiunTujuan" required>
                 <option value="" disabled selected>Pilih Stasiun Tujuan</option>
                 <option value="bandaraA">Stasiun Gambir</option>
                 <option value="bandaraB">Stasiun Bandung</option>
@@ -78,21 +78,21 @@
           <div class="tanggal">
             <div class="date-field">
               <label for="tanggalPergi">Tanggal Pergi</label>
-              <input type="date" id="tanggalPergi" name="tanggalPergi" />
+              <input type="date" id="tanggalPergi" name="tanggalPergi" required />
             </div>
 
             <div class="date-field">
                 <label for="kelasPenerbangan">Jumlah Penumpang</label>
-                <select name="kelasPenerbangan" id="kelasPenerbangan">
-                  <option value="Ekonomi">1</option>
-                  <option value="Ekonomi">2</option>
-                  <option value="Ekonomi">3</option>
+                <select name="kelasPenerbangan" id="kelasPenerbangan" required>
+                  <option value="satu">1</option>
+                  <option value="dua">2</option>
+                  <option value="tiga">3</option>
                 </select>
               </div>
 
             <div class="date-field">
               <label for="kelasPenerbangan">Kelas </label>
-              <select name="kelasPenerbangan" id="kelasPenerbangan">
+              <select name="kelasPenerbangan" id="kelasPenerbangan" required>
                 <option value="Ekonomi">Ekonomi</option>
                 <option value="Ekonomi">Premium</option>
                 <option value="Ekonomi">Eksekutif</option>

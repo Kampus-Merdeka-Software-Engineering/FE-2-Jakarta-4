@@ -45,7 +45,7 @@
         <div class="garis"></div>
 
         <h2>Pesan Liburanmu Sekarang!</h2>
-        <form action="pemesananliburan.html" method="get">
+        <form action="pemesananliburan.html" method="get" id="liburanForm">
           <div class="form-group">
             <label for="alamat">Kota Tujuan</label>
             <input
@@ -53,17 +53,18 @@
               id="alamat"
               name="alamat"
               placeholder="Masukkan kota tujuan liburan Anda"
+              required
             />
           </div>
 
           <div class="tanggal">
             <div class="date-field">
               <label for="tanggal">Tanggal</label>
-              <input type="date" id="tanggal" name="tanggal" />
+              <input type="date" id="tanggal" name="tanggal" required />
             </div>
             <div class="date-field">
               <label for="jumlahtiket">Jumlah Tiket</label>
-              <select id="jumlahTiket" name="jumlahTiket">
+              <select id="jumlahTiket" name="jumlahTiket" required>
                 <option value="satu">1</option>
                 <option value="dua">2</option>
                 <option value="tiga">3</option>
