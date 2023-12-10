@@ -39,6 +39,7 @@ var swiper = new Swiper(".slide-content", {
     },
 });
 
+//validasiform
 document.addEventListener("DOMContentLoaded", function () {
     var hotelForm = document.getElementById("hotelForm");
     var pesawatForm = document.getElementById("pesawatForm");
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//swapvalue
 function swapAirports() {
     var bandaraAsalValue = document.getElementById("bandaraAsal").value;
     var bandaraTujuanValue = document.getElementById("bandaraTujuan").value;
@@ -97,6 +99,7 @@ function swapStations() {
     document.getElementById("stasiunTujuan").value = stasiunAsalValue;
 }
 
+//popuppesantiket
 function showPopup(message) {
     document.getElementById('popup-container').style.display = 'flex';
     document.getElementById('popup-title').innerText = message;

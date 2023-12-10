@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travelin Aja</title>
+    <title>Pemesanan Tiket Kereta</title>
+    <link rel="shortcut icon" href="img/logotravel.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,7 +66,7 @@
         </div>
 
         <div class="flight-card-wrapper">
-            <div class="flight-card">
+            <div class="flight-card" id="infokereta">
                 <div class="logo-container">
                     <img src="img/argo.jpg" alt="Maskapai Logo">
                 </div>
@@ -89,177 +90,6 @@
                     </div>
                     <div class="duration">
                         <p>2j 46m</p>
-                    </div>
-                </div>
-                <div class="bottom-section">
-                    <div class="price">
-                        <p>Rp.160,000</p>
-                    </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
-                </div>
-            </div>
-
-            <div class="flight-card">
-                <div class="logo-container">
-                    <img src="img/argo2.jpg" alt="Maskapai Logo">
-                </div>
-                <div class="details">
-                    <h3>Argo Parahyangan 44</h3>
-                    <p>Kelas Ekonomi</p>
-                </div>
-                <div class="section">
-                    <div class="time-section">
-                        <div class="departure">
-                            <p>09:30</p>
-                            <span class="kota">GMR</span>
-                        </div>
-                        <div class="connector">
-                            <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
-                        </div>
-                        <div class="arrival">
-                            <p>12:26</p>
-                            <span class="kota">BDG</span>
-                        </div>
-                    </div>
-                    <div class="duration">
-                        <p>2j 56m</p>
-                    </div>
-                </div>
-                <div class="bottom-section">
-                    <div class="price">
-                        <p>Rp.160,000</p>
-                    </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
-                </div>
-            </div>
-
-        
-            <div class="flight-card">
-                <div class="logo-container">
-                    <img src="img/argo3.jpg" alt="Maskapai Logo">
-                </div>
-                <div class="details">
-                    <h3>Argo Parahyangan 48</h3>
-                    <p>Kelas Ekonomi</p>
-                </div>
-                <div class="section">
-                    <div class="time-section">
-                        <div class="departure">
-                            <p>12:30</p>
-                            <span class="kota">GMR</span>
-                        </div>
-                        <div class="connector">
-                            <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
-                        </div>
-                        <div class="arrival">
-                            <p>15:25</p>
-                            <span class="kota">BDG</span>
-                        </div>
-                    </div>
-                    <div class="duration">
-                        <p>2j 55m</p>
-                    </div>
-                </div>
-                <div class="bottom-section">
-                    <div class="price">
-                        <p>Rp.160,000</p>
-                    </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
-                </div>
-            </div>
-
-            <div class="flight-card">
-                <div class="logo-container">
-                    <img src="img/argo4.jpg" alt="Maskapai Logo">
-                </div>
-                <div class="details">
-                    <h3>Argo Parahyangan 50</h3>
-                    <p>Kelas Ekonomi</p>
-                </div>
-                <div class="section">
-                    <div class="time-section">
-                        <div class="departure">
-                            <p>13:10</p>
-                            <span class="kota">GMR</span>
-                        </div>
-                        <div class="connector">
-                            <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
-                        </div>
-                        <div class="arrival">
-                            <p>16:12</p>
-                            <span class="kota">BDG</span>
-                        </div>
-                    </div>
-                    <div class="duration">
-                        <p>3j 02m</p>
-                    </div>
-                </div>
-                <div class="bottom-section">
-                    <div class="price">
-                        <p>Rp.160,000</p>
-                    </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
-                </div>
-            </div>
-
-            <div class="flight-card">
-                <div class="logo-container">
-                    <img src="img/argo5.jpg" alt="Maskapai Logo">
-                </div>
-                <div class="details">
-                    <h3>Argo Parahyangan 40</h3>
-                    <p>Kelas Ekonomi</p>
-                </div>
-                <div class="section">
-                    <div class="time-section">
-                        <div class="departure">
-                            <p>15:10</p>
-                            <span class="kota">GMR</span>
-                        </div>
-                        <div class="connector">
-                            <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
-                        </div>
-                        <div class="arrival">
-                            <p>17:50</p>
-                            <span class="kota">BDG</span>
-                        </div>
-                    </div>
-                    <div class="duration">
-                        <p>2j 40m</p>
-                    </div>
-                </div>
-                <div class="bottom-section">
-                    <div class="price">
-                        <p>Rp.160,000</p>
-                    </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
-                </div>
-            </div>
-
-            <div class="flight-card">
-                <div class="logo-container">
-                    <img src="img/argo6.jpeg" alt="Maskapai Logo">
-                </div>
-                <div class="details">
-                    <h3>Argo Parahyangan 36</h3>
-                    <p>Kelas Ekonomi</p>
-                </div>
-                <div class="section">
-                    <div class="time-section">
-                        <div class="departure">
-                            <p>18:30</p>
-                            <span class="kota">GMR</span>
-                        </div>
-                        <div class="connector">
-                            <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
-                        </div>
-                        <div class="arrival">
-                            <p>21:24</p>
-                            <span class="kota">BDG</span>
-                        </div>
-                    </div>
-                    <div class="duration">
-                        <p>2j 54m</p>
                     </div>
                 </div>
                 <div class="bottom-section">

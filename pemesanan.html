@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travelin Aja</title>
+    <title>Pemesanan Hotel</title>
+    <link rel="shortcut icon" href="img/logotravel.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,8 +52,7 @@
         </div>
 
         <div class="hotelbox">
-
-          <div class="info-box">
+          <div class="info-box" id="infohotel">
             <img src="img/fieris.jpg" alt="Hotel Fieris">
             <div class="info-content">
                 <h2>Fieris Hotel</h2>
@@ -90,224 +90,6 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 759.000,00 /malam/kamar</p>
-                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/hotelciputra.jpg" alt="Hotel Ciputra">
-            <div class="info-content">
-                <h2>Hotel Ciputra Jakarta</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Grogol, Jakarta Barat, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-door-open" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 kamar</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bed" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 Kasur</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water-ladder" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Kolam Renang</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bell-concierge" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Resepsionis 24 Jam</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 800.000,00 /malam/kamar</p>
-                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/hotelashley.jpeg" alt="Hotel Ashley">
-            <div class="info-content">
-                <h2>Ashley Wahid Hasyim Jakarta</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Gondangdia, Jakarta Pusat, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-door-open" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 kamar</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bed" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 Kasur</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-handshake" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Fasilitas Bisnis</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bell-concierge" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Resepsionis 24 Jam</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 1.147.000,00 /malam/kamar</p>
-                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/mercure.jpg" alt="Hotel Mercure">
-            <div class="info-content">
-                <h2>Mercure Jakarta Gatot Subroto</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Kuningan, Jakarta Selatan, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-door-open" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 kamar</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bed" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 Kasur</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water-ladder" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Kolam Renang</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bell-concierge" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Resepsionis 24 Jam</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-handshake" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Fasilitas Bisnis</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 1.287.000,00 /malam/kamar</p>
-                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/raffles.jpg" alt="Hotel Raffles">
-            <div class="info-content">
-                <h2>Raffles Jakarta</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Setiabudi, Jakarta Selatan, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-door-open" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 kamar</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bed" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 Kasur</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water-ladder" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Kolam Renang</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bell-concierge" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Resepsionis 24 Jam</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 3.500.000,00 /malam/kamar</p>
-                <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-        
-          <div class="info-box">
-            <img src="img/grandhyatt.jpg" alt="Hotel Grand">
-            <div class="info-content">
-                <h2>Grand Hyatt Jakarta</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Thamrin, Jakarta Pusat, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-door-open" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 kamar</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bed" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">1 Kasur</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water-ladder" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Kolam Renang</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-bell-concierge" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Resepsionis 24 Jam</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 4.799.000,00 /malam/kamar</p>
                 <button class="button-booking" onclick="showPopup('Reservasi berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
@@ -374,7 +156,7 @@
           </p>
         </div>
 
-
+        <script src="js/koneksi.js"></script>
         <script src="js/otak.js"></script>
     </body>
 </html>

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travelin Aja</title>
+    <title>Pemesanan Tiket Liburan</title>
+    <link rel="shortcut icon" href="img/logotravel.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,7 +52,7 @@
         </div>
 
         <div class="hotelbox">
-          <div class="info-box">
+          <div class="info-box" id="infoliburan">
             <img src="img/tmii.jpg" alt="tmii">
             <div class="info-content">
                 <h2>Taman Mini Indonesia Indah</h2>
@@ -90,228 +91,6 @@
                   </div>
                 </div>
                 <p class="harga">Rp. 15.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/ancol.jpeg" alt="ancol">
-            <div class="info-content">
-                <h2>Gerbang Utama Ancol</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Pademangan, Jakarta Utara, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Pantai</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-building" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Fasilitas Wisata</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 25.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-        
-          <div class="info-box">
-            <img src="img/museummacan.jpeg" alt="museum">
-            <div class="info-content">
-                <h2>Museum MACAN</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Kebon Jeruk, Jakarta Barat, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-camera-retro" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Spot Foto</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-mosque" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Tempat Ibadah</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 60.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-
-          <div class="info-box">
-            <img src="img/atlantis.jpg" alt="atlantis">
-            <div class="info-content">
-                <h2>Atlantis Water Adventure</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Pademangan, Jakarta Utara, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-water-ladder" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Kolam Renang</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 72.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          <div class="info-box">
-            <img src="img/aquarium.jpg" alt="aquarium">
-            <div class="info-content">
-                <h2>Jakarta Aquarium & Safari</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Grogol, Jakarta Barat, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-camera-retro" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Tempat Foto</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 140.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
-          </div>
-
-          
-
-          <div class="info-box">
-            <img src="img/dufan.jpg" alt="dufan">
-            <div class="info-content">
-                <h2>Dunia Fantasi (Dufan)</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Pademangan, Jakarta Utara, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-wifi" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Wi-Fi</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-mosque" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Tempat Ibadah</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 210.000,00 /tiket/orang</p>
                 <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
             </div>
           </div>
@@ -377,7 +156,7 @@
           </p>
         </div>
 
-
+        <script src="js/koneksi.js"></script>
         <script src="js/otak.js"></script>
     </body>
 </html>
