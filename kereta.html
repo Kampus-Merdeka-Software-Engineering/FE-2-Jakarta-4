@@ -47,64 +47,62 @@
         <div class="garis"></div>
 
         <h2>Pesan Keretamu!</h2>
-        <form action="pemesanankereta.html" method="get" id="keretaForm">
+        <form action="pemesananbandara.html" method="get" id="keretaForm">
           <div class="tanggal">
-            <div class="date-field">
-              <label for="stasiunAsal">Stasiun Asal</label>
-              <!-- Dropdown untuk bandara asal -->
-              <select id="stasiunAsal" name="stasiunAsal" required>
-                <option value="" disabled selected>Pilih Stasiun Asal</option>
-                <option value="bandaraA">Stasiun Gambir</option>
-                <option value="bandaraB">Stasiun Bandung</option>
-                <option value="bandaraC">Stasiun Pasar Senen</option>
-                <option value="bandaraD">Stasiun Kiaracondong</option>
-                <option value="bandaraE">Bandara Cimahi</option>
-              </select>
+            <div class="form-group" id="stasiunAsal">
+              <label for="departure_station">Stasiun Asal</label>
+              <input
+                type="text"
+                id="departure_station"
+                name="departure_station"
+                placeholder="Masukkan nama kota"
+                required
+              />
             </div>
-            <button id="swapButton" type="button" onclick="swapStations()"><i data-feather="repeat"></i></button>
-            <div class="date-field">
-              <label for="stasiunTujuan">Stasiun Tujuan</label>
-              <!-- Dropdown untuk bandara tujuan -->
-              <select id="stasiunTujuan" name="stasiunTujuan" required>
-                <option value="" disabled selected>Pilih Stasiun Tujuan</option>
-                <option value="bandaraA">Stasiun Gambir</option>
-                <option value="bandaraB">Stasiun Bandung</option>
-                <option value="bandaraC">Stasiun Pasar Senen</option>
-                <option value="bandaraD">Stasiun Kiaracondong</option>
-                <option value="bandaraE">Bandara Cimahi</option>
-              </select>
+
+            <!-- <button id="swapButton" type="button" onclick="swapAirports()"><i data-feather="repeat"></i></button> -->
+
+            <div class="form-group" id="stasiunTujuan"> 
+              <label for="arrival_station">Stasiun Tujuan</label>
+              <input
+                type="text"
+                id="arrival_station"
+                name="arrival_station"
+                placeholder="Masukkan nama kota"
+                required
+              />
             </div>
           </div>
 
-          <div class="tanggal">
-            <div class="date-field">
-              <label for="tanggalPergi">Tanggal Pergi</label>
-              <input type="date" id="tanggalPergi" name="tanggalPergi" required />
-            </div>
-
-            <div class="date-field">
-                <label for="kelasPenerbangan">Jumlah Penumpang</label>
-                <select name="kelasPenerbangan" id="kelasPenerbangan" required>
-                  <option value="satu">1</option>
-                  <option value="dua">2</option>
-                  <option value="tiga">3</option>
-                </select>
-              </div>
-
-            <div class="date-field">
-              <label for="kelasPenerbangan">Kelas </label>
-              <select name="kelasPenerbangan" id="kelasPenerbangan" required>
-                <option value="Ekonomi">Ekonomi</option>
-                <option value="Ekonomi">Premium</option>
-                <option value="Ekonomi">Eksekutif</option>
-              </select>
+            <div class="form-group" style="padding-top: 1rem;">
+              <button type="submit">Cari Kereta</button>
             </div>
           </div>
 
-          <div class="form-group">
-            <button type="submit">Cari Kereta</button>
-          </div>
         </form>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('keretaForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const departureStation = document.getElementById('departure_station').value;
+            const arrivalStation = document.getElementById('arrival_station').value;
+
+            try {
+              const response = await fetch(`http://localhost:3000/train?departure_station=${departureStation}&arrival_station=${arrivalStation}`);
+              const flights = await response.json();
+
+              console.log('Response from server:', flights);
+
+              // Redirect to pemesananbandara.html with query parameter
+              window.location.href = `pemesanankereta.html?departure_station=${encodeURIComponent(departureStation)}&arrival_station=${encodeURIComponent(arrivalStation)}`;
+            } catch (error) {
+              console.error('Error fetching Trains:', error);
+            }
+          });
+        });
+        </script>
 
         
       </div>

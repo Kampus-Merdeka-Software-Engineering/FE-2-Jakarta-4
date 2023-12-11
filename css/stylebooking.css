@@ -88,22 +88,24 @@
 }
 
 .hotelbox {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 10px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 10px;
+    margin: 15px;
     gap: 10px;
     padding: 0; 
   }
 
   .hotelbox img {
     object-fit: cover;
-    width: 100%; /* Lebar gambar 100% untuk mengisi kolom */
-    border-radius: 20px 20px 0 0; /* Menerapkan radius di sudut atas saja */
+    width: 100%; 
+    border-radius: 20px 20px 0 0;
     aspect-ratio: 16 / 9;
   }
 
   .info-content {
+    text-align: justify;
     display: grid;
     flex-direction: column;
     border-radius: 0 0 20px 20px; 
@@ -240,11 +242,11 @@
     background-color: #023373;
 }
 
-.flight-card-wrapper{
+.flightcardwrapper{
     margin-bottom: 6%;
 }
 
-.flight-card-wrapper .flight-card{
+.flightcardwrapper .flight-card{
     margin-bottom: -3%;
 }
 
@@ -373,6 +375,7 @@
 .booking-button:hover {
     background-color: #023373;
 }
+
 
 .popup-container {
     display: none;

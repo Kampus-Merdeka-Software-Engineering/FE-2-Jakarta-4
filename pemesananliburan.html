@@ -4,159 +4,200 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pemesanan Tiket Liburan</title>
-    <link rel="shortcut icon" href="img/logotravel.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logotravel.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/stylemain.css" />
     <link rel="stylesheet" href="css/stylebaru.css" />
     <link rel="stylesheet" href="css/stylebooking.css" />
   </head>
   <body>
-        <div class="navbar">
-        <nav>
-            <a href="main.html">
-            <img src="assets/logo.svg" alt="" id="logo" />
-            </a>
-            <ul class="judul">
-            <li><a href="main.html" id="beranda">Beranda</a></li>
-            <li><a href="hotel.html" id="layanan" class="active">Layanan</a></li>
-            <li><a href="tentangkami.html" id="tentang">Tentang Kami</a></li>
-            </ul>
-            <div class="login">
-            <button><a href="#">Masuk</a></button>
-            </div>
-        </nav>
+    <div class="navbar">
+      <nav>
+        <a href="main.html">
+          <img src="assets/logo.svg" alt="" id="logo" />
+        </a>
+        <ul class="judul">
+          <li><a href="main.html" id="beranda">Beranda</a></li>
+          <li><a href="hotel.html" id="layanan" class="active">Layanan</a></li>
+          <li><a href="tentangkami.html" id="tentang">Tentang Kami</a></li>
+        </ul>
+        <div class="login">
+          <button><a href="#">Masuk</a></button>
         </div>
+      </nav>
+    </div>
 
-        <div class="hotel">
-            <img src="img/liburan0.jpg" alt="liburan">
-          <div class="text">
-            <h2>Holiday</h2>
+    <div class="hotel">
+      <img src="img/liburan0.jpg" alt="liburan" />
+      <div class="text">
+        <h2>Holiday</h2>
+      </div>
+    </div>
+
+    <div class="layanan-menu-wrapper">
+      <div class="layanan-menu">
+        <ul>
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="pesawatBook.html">Pesawat</a></li>
+          <li><a href="kereta.html">Kereta</a></li>
+          <li><a href="pemesananliburan.html" class="on">Tiket Liburan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hotelbox" id="infoliburan"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Get the city from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const destination = urlParams.get("destination");
+
+        try {
+          // Fetch hotels based on the city
+          const response = await fetch(
+            `http://localhost:3000/liburan?destination=${destination}`
+          );
+          const holidays = await response.json();
+
+          const infoliburan = document.getElementById("infoliburan");
+          infoliburan.innerHTML = "";
+
+          holidays.forEach((holidays) => {
+            // Buat elemen hotelBox untuk setiap hotel
+            const hotelBox = document.createElement("div");
+            hotelBox.className = "hotelbox";
+
+            // Buat elemen info-box untuk setiap hotel
+            const infoBox = document.createElement("div");
+            infoBox.className = "info-box";
+            infoBox.id = "infohotel";
+
+            infoBox.innerHTML = `
+                      <img src="img/aquarium.jpg" alt="hotel">
+                      <div class="info-content">
+                        <h2>${holidays.holiday_place}</h2>
+                        <p>Destinasi : ${holidays.destination}</p>
+                        <p class="Tanggal">${holidays.holiday_date}</p>
+                        <p>Deskripsi:</p>
+                        <div class="fasilitas-container">
+                          <div class="fasilitas-item">
+                            <span class="fasilitas-text">${holidays.description}</span>
+                          </div>
+                        </div>
+                        <p class="harga">Rp.700.000 /malam/kamar</p>
+                        <button id="bookinghotel" class="button-booking" onclick="createBookingHotel('${holidays.holiday_id}')">Pesan Sekarang</button>
+                      </div>
+                    `;
+
+            // Masukkan info-box ke dalam hotelBox
+            hotelBox.appendChild(infoBox);
+
+            // Masukkan hotelBox ke dalam hotelHasil
+            infoliburan.appendChild(hotelBox);
+          });
+        } catch (error) {
+          console.error("Error fetching hotels:", error);
+        }
+      });
+
+      async function createBookingHotel(holiday_id) {
+        try {
+          // showPopup('Reservasi berhasil dipesan');
+
+          const response = await fetch(
+            "http://localhost:3000/liburan/createBookingLiburan",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                holiday_id: holiday_id,
+              }),
+            }
+          );
+
+          // Handle the response as needed
+          const result = await response.json();
+          console.log("Booking result:", result);
+        } catch (error) {
+          console.error("Error creating booking:", error);
+        }
+      }
+    </script>
+
+    <div id="popup-container" class="popup-container">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="checkmark-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p class="popup-title">Tiket berhasil di pesan. Terima kasih!</p>
+      </div>
+    </div>
+
+    <footer class="palingbawah">
+      <div class="profil">
+        <div class="profil-konten"></div>
+        <div class="profil-konten"></div>
+        <div class="profil-konten"></div>
+      </div>
+
+      <div class="konten">
+        <div class="bawah">
+          <h3>Partner</h3>
+          <div class="logo">
+            <img src="assets/wonderful.png" alt="" width="90%" />
+            <img src="assets/kemenparekraf.png" alt="" width="45%" />
           </div>
         </div>
-
-        <div class="layanan-menu-wrapper">
-          <div class="layanan-menu">
-              <ul>
-                  <li><a href="hotel.html">Hotel</a></li>
-                  <li><a href="pesawatBook.html">Pesawat</a></li>
-                  <li><a href="kereta.html">Kereta</a></li>
-                  <li><a href="pemesananliburan.html" class="on">Tiket Liburan</a></li>
-              </ul>
+        <div class="bawah">
+          <h3>Keamanan Transaksi</h3>
+          <div class="logo">
+            <img src="assets/mscard.png" alt="" width="60%" />
+            <img src="assets/visa.png" alt="" width="60%" />
           </div>
         </div>
-
-        <div class="hotelbox">
-          <div class="info-box" id="infoliburan">
-            <img src="img/tmii.jpg" alt="tmii">
-            <div class="info-content">
-                <h2>Taman Mini Indonesia Indah</h2>
-                <div class="stars">
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                  <i class="fa-solid fa-star" style="color: #e1db15;"></i>
-                </div>
-                <p class="lokasi">Cipayung, Jakarta Timur, Jakarta</p>
-                <p>Fasilitas:</p>
-                <div class="fasilitas-container">
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-camera-retro" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Tempat Foto</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-restroom" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toilet</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-square-parking" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Parkir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-van-shuttle" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Angkutan</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-store" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Toko Suvenir</span>
-                  </div>
-                  <div class="fasilitas-item">
-                    <i class="fa-solid fa-utensils" style="color: #243c66;"></i>
-                    <span class="fasilitas-text">Restaurant</span>
-                  </div>
-                </div>
-                <p class="harga">Rp. 15.000,00 /tiket/orang</p>
-                <button class="button-booking" onclick="showPopup('Tiket berhasil dipesan')">Pesan Sekarang</button>
-            </div>
+        <div class="bawah">
+          <h3>Ikuti Kami</h3>
+          <div class="logo">
+            <a href="https://www.instagram.com/kemenparekraf.ri/"
+              ><img src="assets/ig.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.tiktok.com/@kemenparekraf"
+              ><img src="assets/tt.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.facebook.com/ParekrafRI/"
+              ><img src="assets/fb.png" alt="" width="10%"
+            /></a>
+            <a
+              href="https://id.linkedin.com/company/ministry-of-tourism-and-creative-economy"
+              ><img src="assets/in.png" alt="" width="10%"
+            /></a>
+            <a href="https://www.youtube.com/channel/UClm8VHUZQnhFmIndX6oLgJA"
+              ><img src="assets/yt.png" alt="" width="10%"
+            /></a>
           </div>
         </div>
+      </div>
+    </footer>
+    <div class="deep">
+      <p class="copyright">
+        © 2011-2023 PT. Global TravelinAja Network. All Rights Reserved.
+      </p>
+    </div>
 
-        <div id="popup-container" class="popup-container">
-          <div class="popup-content">
-              <span class="close" onclick="closePopup()">&times;</span>
-              <div class="checkmark-icon"><i class="fa-solid fa-circle-check"></i></div>
-              <p class="popup-title">Tiket berhasil di pesan. Terima kasih!</p>
-          </div>
-        </div>
-
-
-        <footer class="palingbawah">
-          <div class="profil">
-            <div class="profil-konten"></div>
-            <div class="profil-konten"></div>
-            <div class="profil-konten"></div>
-          </div>
-    
-          <div class="konten">
-            <div class="bawah">
-              <h3>Partner</h3>
-              <div class="logo">
-                <img src="assets/wonderful.png" alt="" width="90%" />
-                <img src="assets/kemenparekraf.png" alt="" width="45%" />
-              </div>
-            </div>
-            <div class="bawah">
-              <h3>Keamanan Transaksi</h3>
-              <div class="logo">
-                <img src="assets/mscard.png" alt="" width="60%" />
-                <img src="assets/visa.png" alt="" width="60%" />
-              </div>
-            </div>
-            <div class="bawah">
-              <h3>Ikuti Kami</h3>
-              <div class="logo">
-                <a href="https://www.instagram.com/kemenparekraf.ri/"
-                  ><img src="assets/ig.png" alt="" width="10%"
-                /></a>
-                <a href="https://www.tiktok.com/@kemenparekraf"
-                  ><img src="assets/tt.png" alt="" width="10%"
-                /></a>
-                <a href="https://www.facebook.com/ParekrafRI/"
-                  ><img src="assets/fb.png" alt="" width="10%"
-                /></a>
-                <a
-                  href="https://id.linkedin.com/company/ministry-of-tourism-and-creative-economy"
-                  ><img src="assets/in.png" alt="" width="10%"
-                /></a>
-                <a href="https://www.youtube.com/channel/UClm8VHUZQnhFmIndX6oLgJA"
-                  ><img src="assets/yt.png" alt="" width="10%"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <div class="deep">
-          <p class="copyright">
-            © 2011-2023 PT. Global TravelinAja Network. All Rights Reserved.
-          </p>
-        </div>
-
-        <script src="js/koneksi.js"></script>
-        <script src="js/otak.js"></script>
-    </body>
+    <script src="js/koneksi.js"></script>
+    <script src="js/otak.js"></script>
+  </body>
 </html>

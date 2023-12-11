@@ -48,57 +48,61 @@
         <h2>Pesan Pesawatmu!</h2>
         <form action="pemesananbandara.html" method="get" id="pesawatForm">
           <div class="tanggal">
-            <div class="date-field">
-              <label for="bandaraAsal">Bandara Asal</label>
-              <!-- Dropdown untuk bandara asal -->
-              <select id="bandaraAsal" name="bandaraAsal" required>
-                <option value="" disabled selected>Pilih Bandara Asal</option>
-                <option value="bandaraA">Bandara Soekarno-Hatta</option>
-                <option value="bandaraB">Bandara Ngurah Rai</option>
-                <option value="bandaraC">Bandara Juanda</option>
-                <option value="bandaraD">Bandara Kualanamu</option>
-                <option value="bandaraE">Bandara Sultan Hasanuddin</option>
-                <option value="bandaraF">Bandara Lombok</option>
-                <option value="bandaraG">Bandara Halim Perdanakusuma</option>
-              </select>
+            <div class="form-group" id="bandaraAsal">
+              <label for="departure_city">Bandara Asal</label>
+              <input
+                type="text"
+                id="departure_city"
+                name="departure_city"
+                placeholder="Masukkan nama kota"
+                required
+              />
             </div>
-            <button id="swapButton" type="button" onclick="swapAirports()"><i data-feather="repeat"></i></button>
-            <div class="date-field">
-              <label for="bandaraTujuan">Bandara Tujuan</label>
-              <!-- Dropdown untuk bandara tujuan -->
-              <select id="bandaraTujuan" name="bandaraTujuan" required>
-                <option value="" disabled selected>Pilih Bandara Tujuan</option>
-                <option value="bandaraA">Bandara Soekarno-Hatta</option>
-                <option value="bandaraB">Bandara Ngurah Rai</option>
-                <option value="bandaraC">Bandara Juanda</option>
-                <option value="bandaraD">Bandara Kualanamu</option>
-                <option value="bandaraE">Bandara Sultan Hasanuddin</option>
-                <option value="bandaraF">Bandara Lombok</option>
-                <option value="bandaraG">Bandara Halim Perdanakusuma</option>
-              </select>
+
+            <!-- <button id="swapButton" type="button" onclick="swapAirports()"><i data-feather="repeat"></i></button> -->
+
+            <div class="form-group" id="bandaraTujuan"> 
+              <label for="arrival_city">Bandara Tujuan</label>
+              <input
+                type="text"
+                id="arrival_city"
+                name="arrival_city"
+                placeholder="Masukkan nama kota"
+                required
+              />
             </div>
           </div>
 
-          <div class="tanggal">
-            <div class="date-field">
-              <label for="tanggalPergi">Tanggal Pergi</label>
-              <input type="date" id="tanggalPergi" name="tanggalPergi" required />
-            </div>
-
-            <div class="date-field">
-              <label for="kelasPenerbangan">Kelas Penerbangan</label>
-              <select name="kelasPenerbangan" id="kelasPenerbangan" required>
-                <option value="Ekonomi">Ekonomi</option>
-                <option value="Premium">Premium</option>
-                <option value="FirstClass">First Class</option>
-              </select>
+            <div class="form-group" style="padding-top: 1rem;">
+              <button type="submit">Cari Penerbangan</button>
             </div>
           </div>
 
-          <div class="form-group">
-            <button type="submit">Cari Penerbangan</button>
-          </div>
         </form>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('pesawatForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const departureCity = document.getElementById('departure_city').value;
+            const arrivalCity = document.getElementById('arrival_city').value;
+
+            try {
+              const response = await fetch(`http://localhost:3000/flight?departure_city=${departureCity}&arrival_city=${arrivalCity}`);
+              const flights = await response.json();
+
+              console.log('Response from server:', flights);
+
+              // Redirect to pemesananbandara.html with query parameter
+              window.location.href = `pemesananbandara.html?departure_city=${encodeURIComponent(departureCity)}&arrival_city=${encodeURIComponent(arrivalCity)}`;
+            } catch (error) {
+              console.error('Error fetching flights:', error);
+            }
+          });
+        });
+        </script>
+
       </div>
 
       <img
@@ -279,6 +283,7 @@
 
     <script src="js/otak.js"></script>
     <script>
+      import feather from 'feather-icons';
       feather.replace();
     </script>
   </body>
