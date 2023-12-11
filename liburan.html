@@ -51,14 +51,14 @@
             <label for="alamat">Kota Tujuan</label>
             <input
               type="text"
-              id="alamat"
-              name="alamat"
+              id="destination"
+              name="destination"
               placeholder="Masukkan kota tujuan liburan Anda"
               required
             />
           </div>
 
-          <div class="tanggal">
+          <!-- <div class="tanggal">
             <div class="date-field">
               <label for="tanggal">Tanggal</label>
               <input type="date" id="tanggal" name="tanggal" required />
@@ -73,10 +73,31 @@
                 <option value="lima">5</option>
               </select>
             </div>
-          </div>
+          </div> -->
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              document.getElementById('liburanForm').addEventListener('submit', async function (event) {
+                event.preventDefault();
+          
+                const destination = document.getElementById('destination').value;
+                try {
+                  const response = await fetch(`http://localhost:3000/liburan?destination=${destination}`);
+                  const holidays = await response.json();
+          
+                  console.log('Response from server:', holidays);
+          
+                  // Redirect to pemesanan.html with query parameter
+                  window.location.href = `pemesananliburan.html?destination=${encodeURIComponent(destination)}`;
+                } catch (error) {
+                  console.error('Error fetching hotels:', error);
+                }
+              });
+            });
+          </script>
 
           <div class="form-group">
-            <input type="submit" value="Cari Destinasi" />
+            <button type="submit">Cari Destinasi</button>
           </div>
         </form>
       </div>
