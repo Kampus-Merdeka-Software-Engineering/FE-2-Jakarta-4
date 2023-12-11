@@ -46,19 +46,19 @@
         <div class="garis"></div>
 
         <h2>Pesan Hotelmu Sekarang!</h2>
-        <form action="pemesanan.html" method="get"  id="hotelForm">
+        <form action="pemesanan.html" method="get" id="hotelForm">
           <div class="form-group">
-            <label for="alamat">Kota Tujuan</label>
+            <label for="city">Kota Tujuan</label>
             <input
               type="text"
-              id="alamat"
-              name="alamat"
+              id="city"
+              name="city"
               placeholder="Masukkan nama kota tujuan Anda"
               required
             />
           </div>
 
-          <div class="tanggal">
+          <!-- <div class="tanggal">
             <div class="date-field">
               <label for="checkin">Tanggal Check-in</label>
               <input type="date" id="checkin" name="checkin" required />
@@ -67,10 +67,10 @@
               <label for="checkout">Tanggal Check-out</label>
               <input type="date" id="checkout" name="checkout" required />
             </div>
-          </div>
+          </div> -->
 
           <div class="form-group">
-            <input type="submit" value="Cari Hotel" />
+            <button type="submit" >Cari Hotel</button>
           </div>
         </form>
       </div>
@@ -254,6 +254,7 @@
     </div>
 
     <script src="js/otak.js"></script>
+    <script src="api.js"></script>
     <script>
       feather.replace();
     </script>

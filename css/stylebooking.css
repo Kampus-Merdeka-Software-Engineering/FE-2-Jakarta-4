@@ -91,11 +91,11 @@
     margin-bottom: 7%;
 }
 
-.hotelbox .info-box{
+.hotelbox .hotel-container{
     margin-bottom: -3%;
 }
 
-.info-box {
+.hotel-container {
     display: flex;
     align-items: center;
     max-width: 70%;
@@ -106,7 +106,7 @@
     height: 250px;
 }
 
-.info-box img {
+.hotel-container img {
     width: 300px; 
     height: 250px; 
     object-fit: cover; 

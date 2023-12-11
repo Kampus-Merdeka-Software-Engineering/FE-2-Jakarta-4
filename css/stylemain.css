@@ -186,7 +186,7 @@
     flex-direction: column;
 }
 
-input, select {
+button, input, select {
     font-family: "poppins", sans-serif;
     padding: 10px;
     padding-right: 10rem;
@@ -195,7 +195,7 @@ input, select {
     border-bottom: 1px solid #ccc;
 }
 
-input[type="submit"] {
+button[type="submit"] {
     background-color: var(--guest);
     color: #fff;
     border: none;
@@ -204,7 +204,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: var(--hover);
 }
 
