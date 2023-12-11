@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
           const response = await fetch(`http://localhost:3000/hotel?city=${city}`);
           const hotels = await response.json();
-          const hotelsString = JSON.stringify(hotels);
 
 
-          console.log('Response from server:', hotelsString);
+          console.log('Response from server:', hotels);
 
           const hotelHasil = document.getElementById('hotelHasil');
           hotelHasil.innerHTML = '';
 
-          hotelsString.forEach(hotel => {
+          hotels.forEach(hotel => {
               const hotelBox = document.createElement('div');
               hotelBox.className = 'hotelbox';
 

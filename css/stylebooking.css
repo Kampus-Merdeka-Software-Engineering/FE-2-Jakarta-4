@@ -87,36 +87,35 @@
     font-weight: bold;
 }
 
-.hotelbox{
-    margin-bottom: 7%;
-}
-
-.hotelbox .hotel-container{
-    margin-bottom: -3%;
-}
-
-.hotel-container {
+.hotelbox {
     display: flex;
-    align-items: center;
-    max-width: 70%;
-    margin: 70px auto; 
-    border: 2px solid #ddd; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    height: 250px;
-}
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+    gap: 10px;
+    padding: 0; 
+  }
 
-.hotel-container img {
-    width: 300px; 
-    height: 250px; 
-    object-fit: cover; 
-}
+  .hotelbox img {
+    object-fit: cover;
+    width: 100%; /* Lebar gambar 100% untuk mengisi kolom */
+    border-radius: 20px 20px 0 0; /* Menerapkan radius di sudut atas saja */
+    aspect-ratio: 16 / 9;
+  }
 
-.info-content {
-    padding: 20px;
-    display: flex;
+  .info-content {
+    display: grid;
     flex-direction: column;
-}
+    border-radius: 0 0 20px 20px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hotelbox {
+      flex-direction: column;
+    }
+  }
 
 .info-content .stars {
     display: flex;
