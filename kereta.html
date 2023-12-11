@@ -90,7 +90,7 @@
             const arrivalStation = document.getElementById('arrival_station').value;
 
             try {
-              const response = await fetch(`http://localhost:3000/train?departure_station=${departureStation}&arrival_station=${arrivalStation}`);
+              const response = await fetch(`http://localhost:3000/kereta?departure_station=${departureStation}&arrival_station=${arrivalStation}`);
               const flights = await response.json();
 
               console.log('Response from server:', flights);

@@ -65,27 +65,58 @@
             </div>        
         </div>
 
-        <div class="flight-card-wrapper">
-            <div class="flight-card" id="infokereta">
+        <div class="flightcardwrapper" id="keretaHasil">
+            
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", async function () {
+            // Get the station from the query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const departureStation = urlParams.get("departure_station");
+            const arrivalStation = urlParams.get("arrival_station");
+    
+            try {
+              // Fetch hotels based on the station
+              const response = await fetch(
+                `http://localhost:3000/kereta?departure_station=${departureStation}&arrival_station=${arrivalStation}`
+              );
+              const Trains = await response.json();
+    
+              const keretaHasil = document.getElementById("keretaHasil");
+              keretaHasil.innerHTML = "";
+    
+              Trains.forEach((kereta) => {
+                // Buat elemen hotelBox untuk setiap hotel
+                const flightcardwrapper = document.createElement("div");
+                flightcardwrapper.className = "flightcardwrapper";
+    
+                // Buat elemen info-box untuk setiap hotel
+                const infoBox = document.createElement("div");
+                infoBox.className = "info-box";
+                infoBox.id = "infokereta";
+    
+                infoBox.innerHTML = `
+                <div class="flight-card" >
                 <div class="logo-container">
                     <img src="img/argo.jpg" alt="Maskapai Logo">
                 </div>
                 <div class="details">
-                    <h3>Argo Parahyangan 34</h3>
-                    <p>Kelas Ekonomi</p>
+                    <h3>${kereta.train_name}</h3>
+                    <p>${kereta.kelas}</p>
                 </div>
                 <div class="section">
                     <div class="time-section">
                         <div class="departure">
-                            <p>08:05</p>
-                            <span class="kota">GMR</span>
+                            <p>${kereta.departure_time}</p>
+                            <span class="kota">${kereta.departure_station}</span>
                         </div>
                         <div class="connector">
                             <i class="fa-solid fa-train" style="color: #a7a1a1;"></i>
                         </div>
                         <div class="arrival">
-                            <p>10:52</p>
-                            <span class="kota">BDG</span>
+                            <p>${kereta.arrival_time}</p>
+                            <span class="kota">${kereta.arrival_station}</span>
                         </div>
                     </div>
                     <div class="duration">
@@ -96,10 +127,49 @@
                     <div class="price">
                         <p>Rp.160,000</p>
                     </div>
-                    <button class="booking-button" onclick="showPopup('Tiket Kereta berhasil dipesan')">Pesan Tiket</button>
+                    <button class="booking-button" onclick="createBookingTrain('${kereta.train_id}')">Pesan Tiket</button>
                 </div>
             </div>
-        </div>
+                    `;
+    
+                // Masukkan info-box ke dalam hotelBox
+                flightcardwrapper.appendChild(infoBox);
+    
+                // Masukkan flightcard ke dalam hotelHasil
+                keretaHasil.appendChild(flightcardwrapper);
+              });
+            } catch (error) {
+              console.error("Error fetching Train:", error);
+            }
+          });
+    
+    
+          async function createBookingTrain(train_id) {
+        try {
+    
+          // showPopup('Reservasi berhasil dipesan');
+          // Perform the necessary steps to create a booking in the database
+          const response = await fetch(
+            'http://localhost:3000/kereta/createBookingKereta',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                train_id: train_id
+              }),
+            }
+          );
+    
+          // Handle the response as needed
+          const result = await response.json();
+          console.log('Booking result:', result);
+        } catch (error) {
+          console.error("Error creating booking:", error);
+        }
+      }
+        </script>
 
         <div id="popup-container" class="popup-container">
             <div class="popup-content">
