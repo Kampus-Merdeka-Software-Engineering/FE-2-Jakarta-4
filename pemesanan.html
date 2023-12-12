@@ -54,7 +54,20 @@
       </div>
     </div>
 
-    <div class="hotelbox" id="hotelHasil"></div>
+    <div class="hotelbox" id="hotelHasil">
+      
+    </div>
+
+    <div id="popup-container" class="popup-container">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="checkmark-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p class="popup-title">Reservasi berhasil di pesan. Terima kasih!</p>
+      </div>
+    </div>
+    
 
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
@@ -97,6 +110,8 @@
                     <p class="harga">Rp.700.000 /malam/kamar</p>
                     <button id="bookinghotel" class="button-booking" onclick="createBookingHotel('${hotel.hotel_id}')">Pesan Sekarang</button>
                   </div>
+
+                  
                 `;
 
             // Masukkan info-box ke dalam hotelBox
@@ -113,8 +128,6 @@
       async function createBookingHotel(hotel_id) {
     try {
 
-      // showPopup('Reservasi berhasil dipesan');
-      // Perform the necessary steps to create a booking in the database
       const response = await fetch(
         'http://localhost:3000/hotel/createBookingHotel',
         {
@@ -131,21 +144,14 @@
       // Handle the response as needed
       const result = await response.json();
       console.log('Booking result:', result);
+
+      showPopup('Reservasi berhasil dipesan');
+
     } catch (error) {
       console.error("Error creating booking:", error);
     }
   }
     </script>
-
-    <div id="popup-container" class="popup-container">
-      <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <div class="checkmark-icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <p class="popup-title">Reservasi berhasil di pesan. Terima kasih!</p>
-      </div>
-    </div>
 
     <footer class="palingbawah">
       <div class="profil">

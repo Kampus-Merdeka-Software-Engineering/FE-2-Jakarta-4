@@ -130,6 +130,9 @@
           // Handle the response as needed
           const result = await response.json();
           console.log("Booking result:", result);
+
+          showPopup('Tiket berhasil dipesan');
+
         } catch (error) {
           console.error("Error creating booking:", error);
         }
